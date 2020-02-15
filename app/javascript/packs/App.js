@@ -1,14 +1,29 @@
-import React from "react";
-
+import React, {Suspense} from "react";
+import {Route, Switch} from "react-router-dom";
+import Routes from "./routes";
 
 class App extends React.Component {
+
     render() {
+        const routes = Routes.map((route, index) => {
+            return route.component ?
+                <Route
+                    key={index}
+                    path={route.path}
+                    exact={route.exact}
+                    name={route.name}
+                    render={props => <route.component {...props} />}
+                />
+                : null
+        });
         return (
-            <div className="App">
+            <Suspense fallback={
                 <div>
-                    <p> IT works</p>
+                    Some loading ..
                 </div>
-            </div>
+            }>
+                <Switch>{routes}</Switch>
+            </Suspense>
         );
     }
 }
