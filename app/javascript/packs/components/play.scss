@@ -1,0 +1,119 @@
+.main-container {
+    justify-content: center;
+    margin: 50px auto;
+    width: 570px;
+    position: relative;
+
+    .default {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 50px;
+        background: rgba(255,255,255,0.7);
+        padding: 60px;
+
+        input {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        button{
+            font-size: 30px;
+        }
+    }
+
+    .score {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 50px;
+        text-align: center;
+        background: rgba(255,255,255,0.6);
+
+        p {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-top: 0;
+            }
+
+            button{
+                font-size: 30px;
+            }
+        }
+    }
+
+    .timer-container {
+        margin-bottom: 10px;
+        span {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        &.inactive {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }
+
+    .board-area {
+        display: flex;
+
+        &.inactive {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }
+    .game-area,.control-container {
+        margin-bottom: 10px;
+    }
+
+    .play {
+        width: 260px;
+    }
+
+    .control-container {
+        padding-right: 10px;
+        div {
+            margin-bottom: 10px;
+            input {
+                width: 90%;
+                padding: 10px;
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                font-size: 25px;
+            }
+
+        }
+    }
+    .sidebar {
+        margin-left: 50px;
+        .timer-container {
+            margin-bottom: 10px;
+        }
+        .found-words-container {
+            width: 250px;
+            height: 250px;
+            overflow-y: scroll;
+            border: 1px solid #000;
+
+            .word {
+                padding: 10px;
+                border-bottom: 1px solid #000;
+                &:hover {
+                    background:#fffdd0;
+                }
+            }
+        }
+    }
+
+}

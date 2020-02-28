@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from "./App";
+import Play from "./components/play";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import {Reducers} from "./store/reducers";
@@ -11,7 +11,7 @@ const app = (
     <Provider store={store}>
       <BrowserRouter basename={"/"}>
         <div>
-          <App />
+          <Play />
         </div>
       </BrowserRouter>
     </Provider>

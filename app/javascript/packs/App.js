@@ -17,13 +17,7 @@ class App extends React.Component {
                 : null
         });
         return (
-            <Suspense fallback={
-                <div>
-                    Some loading ..
-                </div>
-            }>
-                <Switch>{routes}</Switch>
-            </Suspense>
+           <play></play>
         );
     }
 }

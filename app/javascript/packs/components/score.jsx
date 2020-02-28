@@ -6,8 +6,11 @@ class Score extends React.Component {
         return (
             <div className="score">
                 <div>
-                    <p> Your score is e</p>
+                    <p> Your score is </p>
+                    <p>200</p>
+
                 </div>
+                <p><button>New Game</button></p>
             </div>
         );
     }
